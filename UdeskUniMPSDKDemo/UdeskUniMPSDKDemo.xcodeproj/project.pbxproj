@@ -58,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		970143A3250635B40029B6C4 /* libNativeUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNativeUI.a; path = ../UniMPSDK/Features/Libs/libNativeUI.a; sourceTree = "<group>"; };
 		970380DB244D8D870036C6AC /* __UNI__CBDCE04.wgt */ = {isa = PBXFileReference; lastKnownFileType = file; path = __UNI__CBDCE04.wgt; sourceTree = "<group>"; };
 		97147D2C24A1FFB800E6F106 /* DCUniMPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUniMPConfiguration.h; sourceTree = "<group>"; };
 		97147D2D24A1FFB800E6F106 /* DCUniMPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUniMPError.h; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 		97C6F1D323B9F28000746148 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		97C6F1D523B9F2C700746148 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		97C6F1D923B9F32100746148 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		97D1C11B25062BCA00D311FF /* libIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIO.a; path = ../UniMPSDK/Features/Libs/libIO.a; sourceTree = "<group>"; };
 		97D5E55023C340A700F924E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		97D5E55423C340EA00F924E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		97D5E55623C340FB00F924E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -419,6 +421,8 @@
 			children = (
 				978860D82547CDD000E4B1D5 /* libNativeUI.a */,
 				978860D62547CD4F00E4B1D5 /* libPGInvocation.a */,
+				970143A3250635B40029B6C4 /* libNativeUI.a */,
+				97D1C11B25062BCA00D311FF /* libIO.a */,
 				972FAB65250631F900401A44 /* libIO.a */,
 				979737CD23F6A9BF0032BD72 /* MapKit.framework */,
 				975A19D423F256E100B08990 /* libcoreSupport.a */,
@@ -466,7 +470,7 @@
 			dependencies = (
 			);
 			name = UdeskUniMPSDKDemo;
-			productName = UdeskUniMPSDKDemo;
+			productName = HelloUniAppDemo;
 			productReference = 97640EC923B7501D004A2389 /* UdeskUniMPSDKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -683,9 +687,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = DVNW3ZM7G9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../UniMPSDK\"/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../UniMPSDK\"/**",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/UdeskUniMPSDKDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -693,9 +700,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../UniMPSDK\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../UniMPSDK\"/**",
+				);
 				MARKETING_VERSION = 1.0.1;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.udesk.UdeskUniMPSDKDemo;
 				PRODUCT_NAME = UdeskUniMPSDKDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -710,9 +723,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = DVNW3ZM7G9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../UniMPSDK\"/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../UniMPSDK\"/**",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/UdeskUniMPSDKDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -720,9 +736,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../UniMPSDK\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../UniMPSDK\"/**",
+				);
 				MARKETING_VERSION = 1.0.1;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.udesk.UdeskUniMPSDKDemo;
 				PRODUCT_NAME = UdeskUniMPSDKDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
